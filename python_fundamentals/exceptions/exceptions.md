@@ -21,7 +21,7 @@ except:
   print("Error: You must enter a number")
 ```
 
-If the user inputs a string of letters, say "abc", an exception is raised in the third line as calling int("abc") raises an exception.
+If the user inputs a string of letters, say "abc", an exception is raised in the third line as calling int("abc") raises an exception, and the program jumps from the try block down to the except block.
 
 # Syntax Review:
 * `assert` - checks if a condition is met, and if it is not met it raises an exception
