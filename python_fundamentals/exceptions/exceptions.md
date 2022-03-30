@@ -46,6 +46,7 @@ except:
 ```
 
 Now if the user inputs a string of letters, say "abc", an exception is raised in the third line as calling int("abc") raises an exception, and the program jumps from the try block down to the except block.
+
 ------------------------------------------------------------------------------------
 
 ## Section #2: assert
