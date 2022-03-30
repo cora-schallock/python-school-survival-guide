@@ -14,7 +14,7 @@ The try-except block is the foundation of how exceptions are handeled in python.
 #### Example #1: Basic try-except
 Let's say that we want to write a program that asks the user for a number and calculates the [factorial](https://en.wikipedia.org/wiki/Factorial) of that number.
 
-We begin by defing a fatocial function:
+We begin by defing a function to calculate the factorial:
 ```
 def factorial(x):
     if x == 0:
@@ -66,7 +66,7 @@ So if we want to prevent this bug from happening, we need to use something other
 ## Section #2: assert
 If you need to check if a required condition holds, you can use an assert statement. An assert statement checks if a given conidion is true, and if not it raises an exception.
 
-Let's expand on example #1 by adding an assert statement:
+Let's expand on example #1 by adding an assert statement to check if the number is an integer:
 
 ------------------------------------------------------------------------------------
 #### Example #2: Assert Statement
@@ -81,6 +81,8 @@ except:
     print("Error: You must enter a number")
 ```
 ------------------------------------------------------------------------------------
+
+Now if the user inputs `3.21` it will print an error message.
 
 # Syntax Review:
 * `assert` - checks if a condition is met, and if it is not met it raises an exception
