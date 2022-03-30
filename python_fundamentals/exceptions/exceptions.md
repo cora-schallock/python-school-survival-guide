@@ -3,7 +3,7 @@
 # Key Terms:
 * exception - an error that occurs while your code is running
 * raise - create an exception
-* try/ except block - a block of code that checks for exceptions, and if an exception occurs it is handeled 
+* try/ except block - a block of code that checks for exceptions, and if an exception occurs, it is handled appropriately 
 
 ## Section #1: try/ except
 The try/ except block is the foundation of how exceptions are handeled in python. A try/ except block has two parts the try block and the except block. 
