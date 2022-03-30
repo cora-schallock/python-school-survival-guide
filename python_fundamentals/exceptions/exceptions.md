@@ -49,40 +49,6 @@ Now if the user inputs a string of letters, say "abc", an exception is raised in
 
 ------------------------------------------------------------------------------------
 
-Now before we move on I want to mention a Key Idea:
-
-**Key Idea**: Not all bugs in code will cause an exception to be raised. So adding a try-except block won't fix all the potential issues in your code.
-
-To understand this Key Idea, let's think about what would happen if in Example #1 if the user inputted a non-integer such as `3.21`.The factorial of `3.21` is not defined but if you input this into the example above, it will print 6. Why?
-
-
-Even though `3.21` is not an integer, python can cast it to an integer (in this case `3.21` -> `3`) and that casted integer can be used to compute a factorial.
-
-
-So if we want to prevent this bug from happening, we need to use something other than a try-except block. One method is to use an assert statement.
-
-
-
-## Section #2: assert
-If you need to check if a required condition holds, you can use an assert statement. An assert statement checks if a given conidion is true, and if not it raises an exception.
-
-Let's expand on example #1 by adding an assert statement to check if the number is an integer:
-
-------------------------------------------------------------------------------------
-#### Example #2: Assert Statement
-
-```
-try:
-    user_input = input("please enter a number:")
-    the_number = int(user_input)
-    assert the_number.isdigit(), raise TypeError #check if the_number is an integer, and if not raises a TypeError
-    print(factorial(the_number))
-except:
-    print("Error: You must enter a number")
-```
-------------------------------------------------------------------------------------
-
-Now if the user inputs `3.21` it will print an error message.
 
 # Syntax Review:
 * `assert` - checks if a condition is met, and if it is not met it raises an exception
