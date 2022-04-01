@@ -12,7 +12,7 @@ The try-except block is the foundation of how exceptions are handeled in python.
 
 ------------------------------------------------------------------------------------
 #### Example #1: Basic try-except
-Let's say that we want to write a program that asks the user for a number and calculates the [factorial](https://en.wikipedia.org/wiki/Factorial) of that number.
+Let's say that we want to write a program that asks the user for a number (x) and calculates the [factorial](https://en.wikipedia.org/wiki/Factorial) of that number (x!).
 
 We begin by defing a function to calculate the factorial:
 ```
