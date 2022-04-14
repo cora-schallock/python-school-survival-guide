@@ -14,6 +14,7 @@ A spreedsheet is oraganized by columns (cells stacked on top of each other verti
 TODO: add Image
 
 In order to easily read from a CSV we will be using the csv library.
+
 ------------------------------------------------------------------------------------
 #### Example #1: Reading From a CSV
 
@@ -29,13 +30,15 @@ def read_csv_file(file_path):
 
 ```
 
+The key line here is `csv.DictReader(csvfile)`. This is a function from the [csv library](https://docs.python.org/3/library/csv.html#csv.DictReader) and it creates a dictionary for each row. In this dictionary, the keys are the column names and the values are the corresponding entries in that specific column and row.
+
 To test out this function, let's call it with the sample csv `giraffe.csv`:
 
 ```
 read_csv_file("sample_csv_files/giraffe.csv")
 ```
 
-This will print out each line as a dictionary, where the keys are the column names and the values are the corresponding entries in that specific column and row:
+This will print out each line as a dictionary:
 ```
 {'Name': 'Glenn', 'Subspecies': 'Angolan', 'Height': '490'}
 {'Name': 'Galaxy', 'Subspecies': 'Masai ', 'Height': '518'}
@@ -43,3 +46,6 @@ This will print out each line as a dictionary, where the keys are the column nam
 ```
 
 ------------------------------------------------------------------------------------
+
+## References:
+* [Python's CSV Documentation](https://docs.python.org/3/library/csv.html)
