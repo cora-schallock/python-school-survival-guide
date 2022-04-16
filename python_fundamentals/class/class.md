@@ -2,24 +2,53 @@
 
 ## Key Terms:
 * class - a type in python
-* object - a instance of a specific class
-* method - a function that belongs to a specific class
-* class variable - a variable that belongs to a specific object 
+* object - an instance of a class
+* method - a function that specifies how your class behaves and is used to customize the functionality of your class
+* attributes - a variable that belongs to a specific object of the class
+* initalize - create a new class object
 
 ## Section #1: What's a class
-A class can be thought of as a type in python. When you write code to define a custom class, you are in essence creating a new type that contains specific data and a specific functionality. When you want to create a new variable of a class, that is called an object. The data storred in the object is stored using class variables while the functionality is specified using a method.
+A class can simply be thought of a type in python. Let's say you want to create your own custom type that has a unique functionality and stores data, this can be done by defining a custom class.
 
-### Syntax:
-If we want to create a new type `animal` we can use the syntax below:
+By defining a custom class, you are just specifying a new type. In in this new custom class, you can define both class methods and attributes you can customize the functionality of the type and data storred in the type, respectively.
+
+## Section #2 Initalizg (a.k.a the `__init__` method)
+When you create a new variable of a class, you create an object (sometimes refered to as a "class object"). 
+
+
+The object is created using the initalization method  `__init__`, in general the syntax looks like this:
 ```
-class animal:
-  def __init__(self):
+#define CustomClass
+class CustomClass:
+  def __init__(self,**kwargs):
+    #insert code here to save the **kwargs as attributes
     pass
     
-an_animal = animal() #creating an object of type animal
+an_object = CustomClass() #creating an object of type CustomClass
 ```
 
-## Section #2: Methods
+Side note, if you read through Python's documentation and you see `**kwargs` or `**kw` this means keyword-arguments. This is shorthand to say that a class method (or a function) can have arguments but doesn't have to. In this syntax it just means that the CustomClass can be initalized with some keyword arguments, and can be customized to fit your use-case (take a look at the example below to get a better idea what this can look like).
+
+
+------------------------------------------------------------------------------------
+#### Example #1: Creating a Class Object with `__init__`
+Let's say we want to create a custom class called `animal`. For now, this class is just going to be used to store information about Zoo Animals (using attributes) and it will store an animals name, species, and height. To define this class, we need an `__init__` method that initalizes a new animal object:
+```
+class animal:
+  def __init__(self, name, species, height):
+    self.name = name
+    self.species = species
+    self.height = height    
+```
+
+And then once we have defined this animal class, we create a class object by using the following syntax:
+```
+geoferry_the_giraffe = animal("geoferry","giraffe",520)
+```
+------------------------------------------------------------------------------------
+
+
+## Section #3: Methods
 Python uses methods to implement built-in operations like comparisons, print statements, etc.
 
 ### __eq__
