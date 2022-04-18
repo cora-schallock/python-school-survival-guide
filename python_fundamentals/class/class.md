@@ -96,10 +96,24 @@ height_in_inches = geoferry_the_giraffe.height_in_inches()
 print(height_in_inches) #prints "204.7244094488189"
 
 geoferry_the_giraffe.set_height("a bad input") #raises a ValueError
+
+geoferry_the_giraffe.set_height(521)
+new_height = geoferry_the_giraffe.get_height()
+print(new_height) #prints "geoferry height is 521 cm"
 ```
+
+An advantage of using setter functions, as opposed to setting a class variable directly is that you can check the value your are setting is valid. In the example above, we want to know that the height is an integer so in `set_height` we add a statement to check that explicitly. 
+
+An advantage of using getter functions, as opposed to getting a class variable directly is that you can standardize the output. In the example above, we want to know that the height is an integer so in `get_height` makes a set string that has the animals name and height as well as the units.
+
+
+The `height_in_inches` is an example of another custom method, and it is being used for a calculation.
+
 ------------------------------------------------------------------------------------
 
+### Section #3.2 Built-in methods
 
+Built-in methods are methods that Python by default defines for you, but can be customized to specify how default python operations on a class should behave. Some examples are the `__str__` method that is used to customize the output of print statements, `__eq__` \ `__lt__` \ `__gt__` that are used for comparisons.
 
 ### __eq__
 The `__eq__` is used to implement `==`
