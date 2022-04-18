@@ -49,7 +49,57 @@ geoferry_the_giraffe = animal("geoferry","giraffe",520)
 
 
 ## Section #3: Methods
-Python uses methods to implement built-in operations like comparisons, print statements, etc.
+As mentioned before, methods are used to specify how classes behave.
+
+There are two types of methods:
+* custom methods
+* built-in methods (sometimes also referred to as "Magic Methods" or "Dunder Methods")
+
+Methods are specified with a method name, the class object you want to run the method with "self", and optionally additional arguments.
+
+### Section #3.1 Custom Methods
+Custom methods are used when you want to add a custom functionality to the class you have created. Custom classes can be used to set class variables (i.e. "Setter Methods" or "Mutator Methods"), get the values of class variables (i.e. "Getter Methods" or "Accessor Methods"), perform calculations, or basically anything a function can do.
+
+------------------------------------------------------------------------------------
+#### Example #2: Custom Classes
+
+We are going to expand on the `animal` class from [the previous example](https://github.com/cora-schallock/python-school-survival-guide/blob/main/python_fundamentals/class/class.md#example-1-creating-a-class-object-with-__init__) by adding three additional methods, a method to update the height, a method to return the height, and a method to convert the height to incehs.
+```
+class animal:
+  def __init__(self, name, species, height):
+    self.name = name
+    self.species = species
+    self.height = height  
+    
+ def set_height(self, height):
+     if isinstance(updated_height,int):
+      self.height = updated_height
+     else:
+      raise ValueError('Height needs to be an integer.)
+     
+ def get_height(self):
+     return "{} height is {} cm".format(self.name,self.height)
+     
+ def height_in_inches(self):
+    #convert animals height in cm. to in.
+    return self.height/2.54
+```
+
+And now to use these functions:
+```
+geoferry_the_giraffe = animal("geoferry","giraffe",520)
+
+height = geoferry_the_giraffe.get_height()
+print(height) #prints "geoferry height is 520 cm"
+
+height_in_inches = geoferry_the_giraffe.height_in_inches()
+print(height_in_inches) #prints "204.7244094488189"
+
+geoferry_the_giraffe.set_height("a bad input") #raises a ValueError
+```
+------------------------------------------------------------------------------------
+
+
 
 ### __eq__
 The `__eq__` is used to implement `==`
