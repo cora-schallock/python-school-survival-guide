@@ -115,8 +115,10 @@ The `height_in_inches` is an example of another custom method, and it is being u
 
 Built-in methods are methods that Python by default defines for you, but can be customized to specify how default python operations on a class should behave. Some examples are the `__str__` method that is used to customize the output of print statements, `__eq__` \ `__lt__` \ `__gt__` that are used for comparisons.
 
+Here are a few examples
+
 ### __eq__
-The `__eq__` is used to implement `==`
+The `__eq__` method is used to implement `==`
 
 If you have an `__eq__` method defined as:
 ```
@@ -139,6 +141,26 @@ animal_1 == animal_2
 type(animal_1).__eq__(animal_1,animal_2)
 ```
 
+
+### __lt__
+The `__lt__` method is used to implement `<`
+
+If you have an `__lt__` method defined as:
+```
+def __lt__(self,object_to_check):
+  return self.height < object_to_check.height
+```
+
+It will be called by the following line:
+```
+animal_1 < animal_2
+```
+
+The `__lt__` method is also used to implement sorting and sorted.
+
+
+
+
 ## Section #3: Misc.
 
 ### Checking Type:
@@ -152,4 +174,4 @@ isinstance(a,animal) #check if the variable a is of type animal
 
 
 #### TODO:
-* reorganize this
+* expand on built-in methods
