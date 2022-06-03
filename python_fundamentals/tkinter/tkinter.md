@@ -8,6 +8,10 @@
 # Section #1: What's Tkinter?
 Tkinter is a Python library that allows you to create graphical windows
 
+#TODO: expand on this
+
+# Section #2: Threading?
+
 ```
 ```
 ## References:
